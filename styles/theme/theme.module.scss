@@ -1,0 +1,127 @@
+@import "./theme/_variables";
+@import "./theme/_responsive";
+
+.main {
+  height: $nav-size;
+  width: 100%;
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+
+    .brand {
+      font-size: 2rem;
+      color: $text-white;
+    }
+
+    .toggle {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
+      color: white;
+      background-color: transparent;
+      border: none;
+      display: none;
+    }
+
+    .navMenu {
+      ul {
+        list-style: none;
+        display: flex;
+
+        li{
+          padding: 1rem;
+
+          a {
+            color: $text-white;
+            font-weight: 300;
+            font-size: .9rem;
+            text-decoration: none;
+            transition: all .5s;
+
+            &:hover {
+              color: $secondary;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.title {
+  color: $text-white;
+  height: calc(100vh - #{$nav-size});
+  display: flex;
+  align-items: center;
+  padding: 0 10rem;
+  position: relative;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: .9rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+}
+
+.indicator {
+  ul {
+    list-style: none;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(50%, -50%);
+
+    li {
+      margin-bottom: 1rem;
+
+      &::before {
+        content: "";
+        background-color: $text-gray;
+        width: $indicatorInative;
+        height: $indicatorInative;
+        min-width: $indicatorInative;
+        min-height: $indicatorInative;
+        display: block;
+        border-radius: 50%;
+        transition: all .5s;
+        cursor: pointer;
+      }
+
+      &.active {
+
+        &::before {
+          content: "";
+          background-color: white;
+          width: $indicatorAtive;
+          height: $indicatorAtive;
+          min-width: $indicatorAtive;
+          min-height: $indicatorAtive;
+        }
+      }
+    }
+  }
+}

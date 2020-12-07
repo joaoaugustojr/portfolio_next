@@ -1,0 +1,67 @@
+// Variables for theme
+
+// Font
+$font: 'Montserrat', sans-serif;
+
+// Colors
+$primary: #545454;
+$secondary: #00C59D;
+$text-white: white;
+$text-gray: #C9C9C9;
+
+// Font Sizes
+$font-size: 1rem;
+
+// Sizes
+$nav-size: 70px;
+$indicatorInative: 6px;
+$indicatorAtive: 8px;
+
+// Util Class
+
+.textPrimary {
+  color: $primary;
+}
+
+.textSecondary {
+  color: $secondary;
+}
+
+.textWhite {
+  color: $text-white;
+}
+
+.textGray {
+  color: $text-gray;
+}
+
+.bgPrimary {
+  color: $primary;
+}
+
+.bgSecondary {
+  color: $secondary;
+}
+
+.bgWhite {
+  color: $text-white;
+}
+
+.bgGray {
+  color: $text-gray;
+}
+
+.buttonSecondary {
+  color: $text-white;
+  background-color: $secondary;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all .5s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
