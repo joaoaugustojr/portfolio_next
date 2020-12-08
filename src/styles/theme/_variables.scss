@@ -69,3 +69,17 @@ $indicatorAtive: 8px;
     color: $primary;
   }
 }
+
+a.linkSecondary {
+  color: $text-white;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: .9rem;
+  transition: all .5s;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: $secondary;
+  }
+}
